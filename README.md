@@ -1,0 +1,7 @@
+# comp6324WebAppIdentify
+Web app(asp.net version) for comp6324 2019T1 group7
+
+The default user for test:
+1.Email: jignesh@gmail.com, Role: Admin, Password:  Test@123
+2.Email: tejas@gmail.com, Role: User, Password: Test@123
+3.Email: rekesh@gmail.com, Role: HR, Password: Test@123

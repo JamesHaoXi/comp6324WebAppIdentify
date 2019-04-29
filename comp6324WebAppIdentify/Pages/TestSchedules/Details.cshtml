@@ -1,0 +1,37 @@
+﻿@page
+@model comp6324WebAppIdentify.Pages.TestSchedules.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TestSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TestSchedule.deviceID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestSchedule.deviceID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TestSchedule.ScheduleTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestSchedule.ScheduleTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TestSchedule.Done)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TestSchedule.Done)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TestSchedule.ScheduleID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

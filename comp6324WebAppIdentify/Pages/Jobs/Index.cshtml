@@ -1,0 +1,55 @@
+﻿@page
+@model comp6324WebAppIdentify.Pages.Jobs.IndexModel
+
+@{
+    ViewData["Title"] = "Faulty parts list";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].deviceID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].CreateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].CloseTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].Done)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Job) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.deviceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CloseTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Done)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.JobID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.JobID" asp-route-test=0>Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.JobID">Delete</a> |
+                <a asp-page="./Details" asp-route-id="@item.JobID" asp-route-test=1>Enable Test</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
